@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles.css">
+    <link href="/css/tailwind.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/2769579.png" type="image/png">
+    
+      
+
+
+    <title>Breast Cancer Prediction</title>
+</head>
+<body class="bg-zinc-900 text-white">
+    <div class="w-full h-screen bg-gray-900 flex flex-col items-center justify-center text-white text-center">
+        <!-- Image of Breast Cancer Ribbon -->
+        <img src="/2769579.png" alt="Breast Cancer Awareness Ribbon" class="w-40 h-40 mb-6" />
+        
+        <!-- Text Content -->
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Breast Cancer Awareness</h1>
+        <p class="text-lg md:text-xl font-light mb-8">Join us in the fight against breast cancer. Together, we can make a difference.</p>
+        
+        <!-- Button (Optional) -->
+        <!-- <a href="https://www.who.int/news-room/fact-sheets/detail/breast-cancer" class="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-lg hover:bg-pink-600 transition">Learn More</a> -->
+      </div>
+
+    <div class="max-w-7xl mx-auto mt-10 p-6 bg-zinc-800 rounded-lg">
+        <h2 class="text-2xl font-bold text-center mb-6">Prediction Form</h2>
+        <p class="text-center text-gray-400 mb-4 text-sm">Please complete all fields. Pre-filled values are provided as an example.</p>
+
+        <form action="/submit" method="POST">
+
+            <!-- Input Fields with 3 Columns per Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="flex flex-col">
+                    <label for="mean_radius" class="mb-2">Mean Radius</label>
+                    <input type="number" id="mean_radius" name="mean_radius" value="17.462830" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_texture" class="mb-2">Mean Texture</label>
+                    <input type="number" id="mean_texture" name="mean_texture" value="21.604906" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_perimeter" class="mb-2">Mean Perimeter</label>
+                    <input type="number" id="mean_perimeter" name="mean_perimeter" value="115.365377" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_area" class="mb-2">Mean Area</label>
+                    <input type="number" id="mean_area" name="mean_area" value="978.376415" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_smoothness" class="mb-2">Mean Smoothness</label>
+                    <input type="number" id="mean_smoothness" name="mean_smoothness" value="0.102898" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_compactness" class="mb-2">Mean Compactness</label>
+                    <input type="number" id="mean_compactness" name="mean_compactness" value="0.145188" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_concavity" class="mb-2">Mean Concavity</label>
+                    <input type="number" id="mean_concavity" name="mean_concavity" value="0.160775" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_concave_points" class="mb-2">Mean Concave Points</label>
+                    <input type="number" id="mean_concave_points" name="mean_concave_points" value="0.087990" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_symmetry" class="mb-2">Mean Symmetry</label>
+                    <input type="number" id="mean_symmetry" name="mean_symmetry" value="0.192909" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mean_fractal_dimension" class="mb-2">Mean Fractal Dimension</label>
+                    <input type="number" id="mean_fractal_dimension" name="mean_fractal_dimension" value="0.062680" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="radius_error" class="mb-2">Radius Error</label>
+                    <input type="number" id="radius_error" name="radius_error" value="0.609083" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="texture_error" class="mb-2">Texture Error</label>
+                    <input type="number" id="texture_error" name="texture_error" value="1.210915" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="perimeter_error" class="mb-2">Perimeter Error</label>
+                    <input type="number" id="perimeter_error" name="perimeter_error" value="4.323929" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="area_error" class="mb-2">Area Error</label>
+                    <input type="number" id="area_error" name="area_error" value="72.672406" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="smoothness_error" class="mb-2">Smoothness Error</label>
+                    <input type="number" id="smoothness_error" name="smoothness_error" value="0.006780" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="compactness_error" class="mb-2">Compactness Error</label>
+                    <input type="number" id="compactness_error" name="compactness_error" value="0.032281" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="concavity_error" class="mb-2">Concavity Error</label>
+                    <input type="number" id="concavity_error" name="concavity_error" value="0.041824" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="concave_points_error" class="mb-2">Concave Points Error</label>
+                    <input type="number" id="concave_points_error" name="concave_points_error" value="0.015060" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="symmetry_error" class="mb-2">Symmetry Error</label>
+                    <input type="number" id="symmetry_error" name="symmetry_error" value="0.020472" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="fractal_dimension_error" class="mb-2">Fractal Dimension Error</label>
+                    <input type="number" id="fractal_dimension_error" name="fractal_dimension_error" value="0.004062" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_radius" class="mb-2">Worst Radius</label>
+                    <input type="number" id="worst_radius" name="worst_radius" value="21.134811" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_texture" class="mb-2">Worst Texture</label>
+                    <input type="number" id="worst_texture" name="worst_texture" value="29.318208" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_perimeter" class="mb-2">Worst Perimeter</label>
+                    <input type="number" id="worst_perimeter" name="worst_perimeter" value="141.370330" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_area" class="mb-2">Worst Area</label>
+                    <input type="number" id="worst_area" name="worst_area" value="1422.286321" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_smoothness" class="mb-2">Worst Smoothness</label>
+                    <input type="number" id="worst_smoothness" name="worst_smoothness" value="0.144845" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_compactness" class="mb-2">Worst Compactness</label>
+                    <input type="number" id="worst_compactness" name="worst_compactness" value="0.374824" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_concavity" class="mb-2">Worst Concavity</label>
+                    <input type="number" id="worst_concavity" name="worst_concavity" value="0.450606" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_concave_points" class="mb-2">Worst Concave Points</label>
+                    <input type="number" id="worst_concave_points" name="worst_concave_points" value="0.182237" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_symmetry" class="mb-2">Worst Symmetry</label>
+                    <input type="number" id="worst_symmetry" name="worst_symmetry" value="0.323468" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="worst_fractal_dimension" class="mb-2">Worst Fractal Dimension</label>
+                    <input type="number" id="worst_fractal_dimension" name="worst_fractal_dimension" value="0.091530" required class="bg-zinc-700 text-white p-2 rounded-md">
+                </div>
+
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6">
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+  
+</html>
